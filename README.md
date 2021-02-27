@@ -8,7 +8,8 @@ JIRA_USER=email@account.com<br>
 JIRA_PASS=token generated in jira settings<br>
 
 ## Installation of dependencies
-python3 -m pip install -r requirements.txt 
+python -m pip install -r requirements.txt
+(or) pip install -r requirements.txt
 
 ## Usage:
 jql variable holds the JQL query of your choosing - no validation so the query must be valid!

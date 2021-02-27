@@ -23,7 +23,7 @@ def argument_handler():
 
     issues = []
   
-    jql = 'category = support AND createdDate > startOfDay()'
+    jql = 'category = support AND createdDate > startOfMonth()'
   
     block_size = 100
     block_num = 0
