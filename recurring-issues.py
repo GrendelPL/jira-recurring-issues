@@ -43,8 +43,7 @@ def argument_handler():
         if len(issues) == 0:
             # Retrieve issues until there are no more to come
             break
-        block_num += 1
-    print(len(issues))
+        block_num += 1    
 
     for issue in issues:     
         subject = issue.fields.summary
@@ -59,10 +58,11 @@ def argument_handler():
     with open(filename,'w',encoding='utf-8') as filehandle:
         all_together = collections.Counter(tickets_list).most_common()
         for s in all_together:
-            print(*s)
             line = ''.join(str(s))
             withnewline = line+'\n'
             filehandle.write(withnewline)
+    print("Total number of tickets: ",len(issues))
+    print("Results saved to :",filename)
 
 def main():
     argument_handler()
